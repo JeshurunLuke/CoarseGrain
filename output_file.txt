@@ -1,0 +1,66 @@
+import "monomer_H.lt"      # defines the "H" molecular subunit
+import "monomer_P.lt"      # defines the "P" molecular subunit
+
+
+
+Polymer {
+
+  create_var {$mol}  # optional:force all monomers to share the same molecule-ID
+                     # (The "Data Atoms" in H and P must use "$mol:..." notation.)
+
+  # This causes mon1,mon2,mon3,...,mon14 to share the same molecule counter
+  # because in the forcefield.lt file, the "..." in "$mol:..." preferentially 
+  # looks for a counter of that type in a parent molecule or earlier ancestor.
+
+
+  # A polymer of alternating "H" and "P" monomers:  mon0 = new H.rot(0.0, 0,0,0).move(0.0,0,0)
+  mon1 = new H.rot(180.0, 1,0,0).move(3.4,0,0)
+  mon2 = new H.rot(0.0, 0,0,0).move(6.8,0,0)
+  mon3 = new H.rot(180.0, 1,0,0).move(10.2,0,0)
+  mon4 = new H.rot(0.0, 0,0,0).move(13.6,0,0)
+  mon5 = new H.rot(180.0, 1,0,0).move(17.0,0,0)
+  mon6 = new H.rot(0.0, 0,0,0).move(20.4,0,0)
+  mon7 = new H.rot(180.0, 1,0,0).move(23.8,0,0)
+  mon8 = new H.rot(0.0, 0,0,0).move(27.2,0,0)
+  mon9 = new H.rot(180.0, 1,0,0).move(30.599999999999998,0,0)
+  mon10 = new P.rot(0.0, 0,0,0).move(34.0,0,0)
+  mon11 = new P.rot(180.0, 1,0,0).move(37.4,0,0)
+  mon12 = new P.rot(0.0, 0,0,0).move(40.8,0,0)
+  mon13 = new P.rot(180.0, 1,0,0).move(44.199999999999996,0,0)
+  mon14 = new P.rot(0.0, 0,0,0).move(47.6,0,0)
+  mon15 = new P.rot(180.0, 1,0,0).move(51.0,0,0)
+  mon16 = new P.rot(0.0, 0,0,0).move(54.4,0,0)
+  mon17 = new P.rot(180.0, 1,0,0).move(57.8,0,0)
+  mon18 = new P.rot(0.0, 0,0,0).move(61.199999999999996,0,0)
+  mon19 = new P.rot(180.0, 1,0,0).move(64.6,0,0)
+  mon20 = new P.rot(0.0, 0,0,0).move(68.0,0,0)
+  mon21 = new P.rot(180.0, 1,0,0).move(71.39999999999999,0,0)
+  mon22 = new P.rot(0.0, 0,0,0).move(74.8,0,0)
+  mon23 = new P.rot(180.0, 1,0,0).move(78.2,0,0)
+  mon24 = new P.rot(0.0, 0,0,0).move(81.6,0,0)
+  write("Data Bond List") {
+  	$bond:backbone1	$atom:mon1/ca	$atom:mon2/ca
+  	$bond:backbone2	$atom:mon2/ca	$atom:mon3/ca
+  	$bond:backbone3	$atom:mon3/ca	$atom:mon4/ca
+  	$bond:backbone4	$atom:mon4/ca	$atom:mon5/ca
+  	$bond:backbone5	$atom:mon5/ca	$atom:mon6/ca
+  	$bond:backbone6	$atom:mon6/ca	$atom:mon7/ca
+  	$bond:backbone7	$atom:mon7/ca	$atom:mon8/ca
+  	$bond:backbone8	$atom:mon8/ca	$atom:mon9/ca
+  	$bond:backbone9	$atom:mon9/ca	$atom:mon10/ca
+  	$bond:backbone10	$atom:mon10/ca	$atom:mon11/ca
+  	$bond:backbone11	$atom:mon11/ca	$atom:mon12/ca
+  	$bond:backbone12	$atom:mon12/ca	$atom:mon13/ca
+  	$bond:backbone13	$atom:mon13/ca	$atom:mon14/ca
+  	$bond:backbone14	$atom:mon14/ca	$atom:mon15/ca
+  	$bond:backbone15	$atom:mon15/ca	$atom:mon16/ca
+  	$bond:backbone16	$atom:mon16/ca	$atom:mon17/ca
+  	$bond:backbone17	$atom:mon17/ca	$atom:mon18/ca
+  	$bond:backbone18	$atom:mon18/ca	$atom:mon19/ca
+  	$bond:backbone19	$atom:mon19/ca	$atom:mon20/ca
+  	$bond:backbone20	$atom:mon20/ca	$atom:mon21/ca
+  	$bond:backbone21	$atom:mon21/ca	$atom:mon22/ca
+  	$bond:backbone22	$atom:mon22/ca	$atom:mon23/ca
+  	$bond:backbone23	$atom:mon23/ca	$atom:mon24/ca
+  }
+}

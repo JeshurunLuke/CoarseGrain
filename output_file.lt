@@ -1,0 +1,36 @@
+import "monomer_H.lt"      # defines the "H" molecular subunit
+import "monomer_P.lt"      # defines the "P" molecular subunit
+
+
+
+Polymer {
+
+  create_var {$mol}  # optional:force all monomers to share the same molecule-ID
+                     # (The "Data Atoms" in H and P must use "$mol:..." notation.)
+
+  # This causes mon1,mon2,mon3,...,mon14 to share the same molecule counter
+  # because in the forcefield.lt file, the "..." in "$mol:..." preferentially 
+  # looks for a counter of that type in a parent molecule or earlier ancestor.
+
+
+  # A polymer of alternating "H" and "P" monomers:  mon0 = new H.rot(0.0, 0,0,0).move(0.0,0,0)
+  mon1 = new H.rot(180.0, 1,0,0).move(3.4,0,0)
+  mon2 = new H.rot(0.0, 0,0,0).move(6.8,0,0)
+  mon3 = new H.rot(180.0, 1,0,0).move(10.2,0,0)
+  mon4 = new H.rot(0.0, 0,0,0).move(13.6,0,0)
+  mon5 = new P.rot(180.0, 1,0,0).move(17.0,0,0)
+  mon6 = new P.rot(0.0, 0,0,0).move(20.4,0,0)
+  mon7 = new P.rot(180.0, 1,0,0).move(23.8,0,0)
+  mon8 = new P.rot(0.0, 0,0,0).move(27.2,0,0)
+  mon9 = new P.rot(180.0, 1,0,0).move(30.599999999999998,0,0)
+  write("Data Bond List") {
+  	$bond:backbone1	$atom:mon1/ca	$atom:mon2/ca
+  	$bond:backbone2	$atom:mon2/ca	$atom:mon3/ca
+  	$bond:backbone3	$atom:mon3/ca	$atom:mon4/ca
+  	$bond:backbone4	$atom:mon4/ca	$atom:mon5/ca
+  	$bond:backbone5	$atom:mon5/ca	$atom:mon6/ca
+  	$bond:backbone6	$atom:mon6/ca	$atom:mon7/ca
+  	$bond:backbone7	$atom:mon7/ca	$atom:mon8/ca
+  	$bond:backbone8	$atom:mon8/ca	$atom:mon9/ca
+  }
+}

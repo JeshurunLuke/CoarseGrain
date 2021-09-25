@@ -1,0 +1,6 @@
+    pair_coeff  1  1      2.50 3.6
+    pair_coeff  2  2      0.10 3.6
+    bond_coeff     1   30.0   3.4
+    bond_coeff     2   30.0   3.4
+    bond_coeff     3   30.0   3.4
+  

@@ -1,0 +1,10 @@
+  write("Data Bond List") {
+  	$bond:backbone1	$atom:mon1/ca	$atom:mon2/ca
+  	$bond:backbone2	$atom:mon2/ca	$atom:mon3/ca
+  	$bond:backbone3	$atom:mon3/ca	$atom:mon4/ca
+  	$bond:backbone4	$atom:mon4/ca	$atom:mon5/ca
+  	$bond:backbone5	$atom:mon5/ca	$atom:mon6/ca
+  	$bond:backbone6	$atom:mon6/ca	$atom:mon7/ca
+  	$bond:backbone7	$atom:mon7/ca	$atom:mon8/ca
+  	$bond:backbone8	$atom:mon8/ca	$atom:mon9/ca
+  }
